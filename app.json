@@ -7,7 +7,7 @@
       "**/*"
     ],
     "splash": {
-      "image": "./public/images/logo.png"
+      "image": "./src/assets/images/logo.png"
     }
   },
   "name": "coursify"
