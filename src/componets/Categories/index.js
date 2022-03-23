@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, View, Image, Text, FlatList } from 'react-native';
-import Media from '../Media';
+import { StyleSheet, SafeAreaView, View, Text, FlatList } from 'react-native';
 import Posts from '../Posts';
 
 
