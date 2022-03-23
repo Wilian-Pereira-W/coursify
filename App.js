@@ -1,9 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Header from './src/componets/Header';
+import api from './src/services/api';
 
 export default function App() {
+  const [categories, setCategories] = useState();
+
+  useEffect(() => {
+    api
+      .get("categories/")
+      .then((response) => setCategories(response.data))
+      .catch((err) => {
+        console.error("ops! ocorreu um erro" + err);
+      });
+  }, []);
+
+  useEffect(() => {
+    console.log(categories);
+  }, [categories]);
   return (
     <SafeAreaView>
       <View style={styles.container}>
