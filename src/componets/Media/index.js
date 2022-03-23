@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { StyleSheet, SafeAreaView, View, Image, FlatList } from 'react-native';
+import { StyleSheet, SafeAreaView, Image, FlatList } from 'react-native';
 import api from '../../services/api';
 
 
