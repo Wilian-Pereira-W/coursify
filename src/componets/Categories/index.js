@@ -13,9 +13,9 @@ function Categories({dataCategories}) {
           keyExtractor={(categorie) => String(categorie.id)}
           renderItem={(categorie) => (
             <View>
-              <View>
-                <Text>{categorie.item.name}</Text>
-                <Text>VER MAIS ▶</Text>
+              <View style={styles.categorie}>
+                <Text style={styles.categorieTitle}>{categorie.item.name.toUpperCase()}</Text>
+                <Text style={styles.categorieViewMore}>VER MAIS ▶</Text>
               </View>
               <Posts id={categorie.item.id} />
             </View>
@@ -28,5 +28,23 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
   },
+  categorie: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    paddingLeft: 20,
+    paddingRight: 10,
+    marginTop: 30,
+    marginBottom: 12,
+  },
+  categorieTitle: {
+    fontSize: 18,
+    color: '#1abc9c',
+    fontWeight: 'bold'
+  },
+  categorieViewMore: {
+    fontSize: 15,
+  }
 });
 export default Categories;
