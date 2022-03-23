@@ -37,8 +37,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   mediaImg: {
-    width: 150,
+    width: 250,
     height:130,
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15
   }
 });
 
