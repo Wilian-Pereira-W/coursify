@@ -23,11 +23,11 @@ function Posts({id}) {
           horizontal
           keyExtractor={(post) => String(post.id)}
           renderItem={(post) => (
-            <View>
+            <View style={styles.postContents}>
               <Media id={post.item.id}/>
-              <Text>{post.item.title.rendered}</Text>
-              <Text>{post.item.excerpt.rendered}</Text>
-              <Text>Leia mais</Text>
+              <Text style={styles.postTitle} numberOfLines={2}>{post.item.title.rendered}</Text>
+              <Text numberOfLines={4} style={styles.postExcerpt}>{post.item.excerpt.rendered.replace('<p>', '')}</Text>
+              <Text style={styles.postReadMore}>Leia mais</Text>
             </View>
           )}
         />
@@ -39,6 +39,34 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
   },
+  postContents: {
+    marginBottom: 10,
+    borderWidth: 0.5,
+    borderRadius: 15,
+    margin: 20,
+    borderColor: '#D3D3D3',
+    paddingBottom: 10
+  },
+  postTitle: {
+    marginLeft: 10,
+    width: 180,
+    fontSize: 15,
+    color: '#1abc9c',
+    margin: 10,
+  },
+  postExcerpt: {
+    marginLeft: 10,
+    width: 180,
+    fontSize: 15,
+    margin: 10,
+  },
+  postReadMore: {
+    marginLeft: 10,
+    width: 180,
+    fontSize: 15,
+    color: '#f9a825',
+    fontWeight: 'bold'
+  }
 });
 
 export default Posts;
