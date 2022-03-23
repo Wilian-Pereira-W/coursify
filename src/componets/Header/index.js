@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: '#D3D3D3',
     paddingLeft: 10,
-    paddingRight: 10
+    paddingRight: 10,
   },
   menu: {
     backgroundColor: '#1abc9c',
