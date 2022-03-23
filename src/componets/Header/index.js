@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
     width: '100%',
-    marginTop: 30,
+    marginTop: 120,
     height: 60,
     borderBottomWidth: 1,
     borderColor: '#D3D3D3',
