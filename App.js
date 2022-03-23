@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Header from './src/componets/Header';
+import Categories from './src/componets/Categories';
 import api from './src/services/api';
 
 export default function App() {
@@ -16,14 +17,11 @@ export default function App() {
       });
   }, []);
 
-  useEffect(() => {
-    console.log(categories);
-  }, [categories]);
   return (
     <SafeAreaView>
       <View style={styles.container}>
         <Header />
-        <Text>Open up App.js to start working on your app!</Text>
+        <Categories dataCategories={categories} />
         <StatusBar style="auto" />
       </View>
     </SafeAreaView>
@@ -32,7 +30,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: '#FFF',
     alignItems: 'center',
     justifyContent: 'center',
   },
