@@ -5,7 +5,7 @@ import Media from '../Media'
 import { useNavigation } from '@react-navigation/native'
 
 
-function Posts({id}) {
+function Posts( { id } ) {
   const navigation = useNavigation();
   const [posts, setPosts] = useState([]);
   useEffect(() => {
