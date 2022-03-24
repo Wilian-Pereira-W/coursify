@@ -1,31 +1,35 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, View, Text, FlatList } from 'react-native';
+import { StyleSheet, SafeAreaView, View, Text, FlatList, ScrollView } from 'react-native';
+import Footer from '../Footer';
 import Posts from '../Posts';
 
 
 function Categories({dataCategories}) {
   return (
-    <SafeAreaView>
-        <FlatList 
-          style={styles.container}
-          data={dataCategories}
-          keyExtractor={(categorie) => String(categorie.id)}
-          renderItem={(categorie) => (
-            <View>
+    <View style={styles.container}>
+      <ScrollView>
+        {
+          dataCategories.map((categorie) => (
+            <View key={categorie.id}>
               <View style={styles.categorie}>
-                <Text style={styles.categorieTitle}>{categorie.item.name.toUpperCase()}</Text>
+                <Text style={styles.categorieTitle} numberOfLines={2}>{categorie.name.toUpperCase()}</Text>
                 <Text style={styles.categorieViewMore}>VER MAIS ▶</Text>
               </View>
-              <Posts id={categorie.item.id} />
+              <Posts id={categorie.id} />
             </View>
-          )}
-        />
-    </SafeAreaView>
+          ))
+        }
+        <View>
+            <Footer />
+        </View>
+      </ScrollView>
+    </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
+    flex: 1
   },
   categorie: {
     alignItems: 'center',
@@ -39,11 +43,12 @@ const styles = StyleSheet.create({
   },
   categorieTitle: {
     fontSize: 18,
+    width: 300,
     color: '#1abc9c',
     fontWeight: 'bold'
   },
   categorieViewMore: {
     fontSize: 15,
-  }
+  },
 });
 export default Categories;
