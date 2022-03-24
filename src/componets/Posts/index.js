@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   postContents: {
     marginBottom: 10,
-    borderWidth: 0.5,
+    borderWidth: 0.1,
     borderRadius: 15,
     margin: 20,
     borderColor: '#D3D3D3',
