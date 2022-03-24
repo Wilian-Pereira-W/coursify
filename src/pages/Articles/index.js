@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   content: {
     width: '100%',
-    padding: 50,
+    padding: 30,
   },
 });
 
