@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, SafeAreaView, Image, FlatList } from 'react-native';
 import api from '../../services/api';
 
 
-function Media({id}) {
+function Media( { id } ) {
   const [medias, setMedias] = useState([]);
   useEffect(() => {
     api

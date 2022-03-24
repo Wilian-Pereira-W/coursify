@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, Linking } from 'react-native';
 
 function Footer() {
@@ -11,7 +11,12 @@ function Footer() {
       <Image style={styles.footerImg}
         source={require('../../assets/images/logo-coursify-w.png')}
       />
-      <Text numberOfLines={3} style={styles.footerText}>O Coursify.me é uma plataforma de ensino a distâcia, onde qualquer pessoa ou empresa pode construir seu EAD e vender cursos pela internet</Text>
+      <Text 
+        numberOfLines={3} 
+        style={styles.footerText}>
+          O Coursify.me é uma plataforma de ensino a distâcia,
+          onde qualquer pessoa ou empresa pode construir seu EAD e vender cursos pela internet
+      </Text>
       <TouchableOpacity onPress={() => handleClick()} style={styles.footerBtn}>
         <Text style={styles.footerBtnText}>Quero conhecer a plataformal</Text>
       </TouchableOpacity>

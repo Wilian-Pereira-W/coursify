@@ -8,7 +8,8 @@ const options = [
   {id: 2, title: 'A-Z'},
   {id: 3, title: 'Z-A'},
   {id: 4, title: 'Mais visualizados'},
-  {id: 5, title: 'Menos visualizados'}]
+  {id: 5, title: 'Menos visualizados'},
+];
 
 function Categories({dataCategories}) {
   const [listCategories, setListCategories] = useState(dataCategories);
@@ -114,7 +115,11 @@ function Categories({dataCategories}) {
           listCategories.map((categorie) => (
             <View key={categorie.id}>
               <View style={styles.categorie}>
-                <Text style={styles.categorieTitle} numberOfLines={2}>{categorie.name.toUpperCase()}</Text>
+                <Text 
+                  style={styles.categorieTitle} 
+                  numberOfLines={2}>
+                    {categorie.name.toUpperCase()}
+                </Text>
                 <Text style={styles.categorieViewMore}>VER MAIS ▶</Text>
               </View>
               <Posts id={ categorie.id } />

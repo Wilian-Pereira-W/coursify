@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet,Text, View, Image, ScrollView, useWindowDimensions } from 'react-native';
+import { StyleSheet,Text, View, ScrollView, useWindowDimensions } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import RenderHTML from 'react-native-render-html';
 import Footer from '../../componets/Footer';
@@ -14,7 +14,11 @@ function Articles() {
       <ScrollView>
         <View style={styles.content}>
           <Text style={styles.title}>{title}</Text>
-          <RenderHTML  tagsStyles={{img: {width: 310, height: 150}}} contentWidth={width} source={ {html: content} } />
+          <RenderHTML 
+            tagsStyles={{img: {width: 310, height: 150}}} 
+            contentWidth={width} 
+            source={ {html: content} } 
+          />
         </View>
         <Footer style={styles.footer}/>
       </ScrollView>

@@ -15,9 +15,10 @@ function Splash() {
   }, []);
   return (
     <View style={styles.container}>
-       <Image style={styles.splashImg}
+       <Image 
+         style={styles.splashImg}
          source={require('../../assets/images/logo.png')}
-        />
+       />
     </View>
   );
 };

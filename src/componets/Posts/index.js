@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import { StyleSheet, SafeAreaView, View, Text, FlatList, TouchableOpacity } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, SafeAreaView, Text, FlatList, TouchableOpacity } from 'react-native';
 import api from '../../services/api';
 import Media from '../Media'
 import { useNavigation } from '@react-navigation/native'
@@ -32,8 +32,16 @@ function Posts( { id } ) {
               style={styles.postContents} 
               onPress={ () => navigateArticles(post.item.content.rendered, post.item.title.rendered) }>
               <Media id={post.item.id}/>
-              <Text style={styles.postTitle} numberOfLines={2}>{post.item.title.rendered}</Text>
-              <Text numberOfLines={4} style={styles.postExcerpt}>{post.item.excerpt.rendered.replace('<p>', '')}</Text>
+              <Text 
+                style={styles.postTitle} 
+                numberOfLines={2}>
+                  {post.item.title.rendered}
+              </Text>
+              <Text 
+                numberOfLines={4} 
+                style={styles.postExcerpt}>
+                  {post.item.excerpt.rendered.replace('<p>', '')}
+              </Text>
               <Text style={styles.postReadMore}>Leia mais</Text>
             </TouchableOpacity>
           )}
