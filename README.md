@@ -1,1 +1,25 @@
-# coursify
+# Projeto Coursify
+
+## 1 - Clone o repositório.
+
+###  git clone git@github.com:Wilian-Pereira-W/coursify.git
+
+## 2 - Navegue entre as pasta do repositório que você acabou de clonar.
+
+###   cd coursify
+
+## 3 - Instale as dependências do projeto.
+
+###  npm install
+
+## 4 - rodar o projeto localmente.
+
+### expo start
+
+## 5 - Para visualizar o aplicativo funcione acesse o link abaixo e use o Aplicativo. Expo Go para visualizar o aplicativo:
+
+###  exp://exp.host/@wilian/coursify?release-channel=default
+
+## link da build
+
+### https://expo.dev/artifacts/f84d91f5-6656-4a4f-9fac-f3a76530e60f
