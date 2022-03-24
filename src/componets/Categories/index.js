@@ -98,7 +98,7 @@ function Categories({dataCategories}) {
             {options.map((option) => (
               <TouchableOpacity key={option.id} style={styles.optionBtn} 
                 onPress={() => handlePress(option)}>
-                <Text>{option.title}</Text>
+                <Text numberOfLines={2}>{option.title}</Text>
                 {option.title === selected && (
                   <Image style={styles.selectChavron}
                   source={require('../../assets/images/check.png')} 
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     borderWidth: 1,
     borderColor: '#000',
-    width: 175,
+    width: 150,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     borderWidth: 1,
     borderColor: '#000',
-    width: 175,
+    width: 150,
     height: 230,
     paddingLeft: 20,
     paddingRight: 10,
