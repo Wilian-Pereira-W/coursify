@@ -5,7 +5,15 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "ios": {
+      "bundleIdentifier": "com.yourcompany.yourappname",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.wilian.coursify_blog",
+      "versionCode": 1
+    }
   },
   "name": "coursify"
 }
