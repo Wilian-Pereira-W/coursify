@@ -20,6 +20,6 @@
 
 ###  exp://exp.host/@wilian/coursify?release-channel=default
 
-## link da build
+## 6 - link da build
 
 ### https://expo.dev/artifacts/f84d91f5-6656-4a4f-9fac-f3a76530e60f
