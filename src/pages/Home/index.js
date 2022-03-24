@@ -16,7 +16,9 @@ function Home() {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Categories dataCategories={categories} />
+        {categories.length !== 0 &&
+          <Categories dataCategories={ categories} />
+        }
       </View>
     </SafeAreaView>
   );
