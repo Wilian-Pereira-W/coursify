@@ -12,11 +12,11 @@
 
 ###  npm install
 
-## 4 - rodar o projeto localmente.
+## 4 - Rodar o projeto localmente.
 
 ### expo start
 
-## 5 - Para visualizar o aplicativo funcione acesse o link abaixo e use o Aplicativo. Expo Go para visualizar o aplicativo:
+## 5 - Para visualizar o aplicativo funcionando acesse o link abaixo e use o Aplicativo Expo Go.
 
 ###  exp://exp.host/@wilian/coursify?release-channel=default
 
