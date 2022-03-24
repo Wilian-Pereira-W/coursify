@@ -65,7 +65,8 @@ const styles = StyleSheet.create({
   postTitle: {
     marginLeft: 10,
     width: 180,
-    fontSize: 15,
+    fontSize: 16,
+    fontWeight: 'bold',
     color: '#1abc9c',
     margin: 10,
   },
