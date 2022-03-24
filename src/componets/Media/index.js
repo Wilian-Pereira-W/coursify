@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   mediaImg: {
-    width: 250,
-    height:130,
+    width: 225,
+    height:100,
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15
   }
