@@ -5,10 +5,7 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "splash": {
-      "image": "./src/assets/images/logo.png"
-    }
+    ]
   },
   "name": "coursify"
 }
