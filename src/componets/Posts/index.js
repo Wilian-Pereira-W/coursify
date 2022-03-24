@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import { StyleSheet, SafeAreaView, View, Text, FlatList } from 'react-native';
+import { StyleSheet, SafeAreaView, View, Text, FlatList, TouchableOpacity } from 'react-native';
 import api from '../../services/api';
 import Media from '../Media'
+import { useNavigation } from '@react-navigation/native'
 
 
 function Posts({id}) {
+  const navigation = useNavigation();
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     api
@@ -15,6 +17,9 @@ function Posts({id}) {
       });
   }, []);
 
+  const navigateArticles = (content, title) => {
+  navigation.navigate('Articles',{ content: content, title:title  })
+  }
   return (
     <SafeAreaView>
         <FlatList 
@@ -23,12 +28,14 @@ function Posts({id}) {
           horizontal
           keyExtractor={(post) => String(post.id)}
           renderItem={(post) => (
-            <View style={styles.postContents}>
+            <TouchableOpacity 
+              style={styles.postContents} 
+              onPress={ () => navigateArticles(post.item.content.rendered, post.item.title.rendered) }>
               <Media id={post.item.id}/>
               <Text style={styles.postTitle} numberOfLines={2}>{post.item.title.rendered}</Text>
               <Text numberOfLines={4} style={styles.postExcerpt}>{post.item.excerpt.rendered.replace('<p>', '')}</Text>
               <Text style={styles.postReadMore}>Leia mais</Text>
-            </View>
+            </TouchableOpacity>
           )}
         />
     </SafeAreaView>
