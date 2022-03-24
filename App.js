@@ -6,7 +6,7 @@ import Categories from './src/componets/Categories';
 import api from './src/services/api';
 
 export default function App() {
-  const [categories, setCategories] = useState();
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     api
@@ -33,5 +33,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     alignItems: 'center',
     justifyContent: 'center',
+    height: '100%',
   },
 });
