@@ -53,6 +53,7 @@ function Posts( { id } ) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
+    width: '95%',
   },
   postContents: {
     marginBottom: 10,

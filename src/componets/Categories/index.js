@@ -150,20 +150,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '100%',
+    width: '95%',
     paddingLeft: 20,
-    paddingRight: 10,
+    paddingRight: 20,
     marginTop: 30,
     marginBottom: 12,
   },
   categorieTitle: {
     fontSize: 18,
-    width: 300,
+    width: 250,
     color: '#1abc9c',
     fontWeight: 'bold'
   },
   categorieViewMore: {
     fontSize: 15,
+    paddingLeft: 40
   },
   select: {
     height: 50,
@@ -198,7 +199,7 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
     paddingRight: 10,
     marginTop:50,
-    zIndex: 2,
+    zIndex: 3
   },
   optionsText: {
     fontSize: 15,
