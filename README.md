@@ -22,4 +22,4 @@
 
 ## 6 - Link da build
 
-### https://expo.dev/artifacts/f84d91f5-6656-4a4f-9fac-f3a76530e60f
+### https://expo.dev/artifacts/c7988895-e170-4514-af71-1ff21c503112
