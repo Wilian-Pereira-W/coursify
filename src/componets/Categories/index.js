@@ -54,7 +54,6 @@ function Categories({dataCategories}) {
     }
     if(option.title === 'Mais visualizados') {
       const descendingOrder = dataCategories.sort((a, b) => b.count - a.count);
-      console.log(descendingOrder);
       setListCategories(descendingOrder);
       setSelected(option.title);
       setText(option.title);
@@ -82,7 +81,7 @@ function Categories({dataCategories}) {
           style={styles.select}
           onPress={() => setModalVisible(true)}
         >
-          <Text>{text}</Text>
+          <Text numberOfLines={2} style={styles.optionsText}>{text}</Text>
           {modalVisible ? (
             <Image style={styles.selectChavron}
               source={require('../../assets/images/chevron-2.png')} 
@@ -99,7 +98,7 @@ function Categories({dataCategories}) {
             {options.map((option) => (
               <TouchableOpacity key={option.id} style={styles.optionBtn} 
                 onPress={() => handlePress(option)}>
-                <Text numberOfLines={2}>{option.title}</Text>
+                <Text numberOfLines={2} style={styles.optionsText}>{option.title}</Text>
                 {option.title === selected && (
                   <Image style={styles.selectChavron}
                   source={require('../../assets/images/check.png')} 
@@ -176,12 +175,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingLeft: 20,
-    paddingRight: 10,
+    paddingLeft: 5,
+    paddingRight: 5,
   },
   selectChavron: {
-    width: 25,
-    height: 15,
+    width: 20,
+    height: 10,
   },
   selectText: {
     fontWeight: 'bold',
@@ -195,11 +194,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#000',
     width: 150,
-    height: 230,
-    paddingLeft: 20,
+    height: 250,
+    paddingLeft: 5,
     paddingRight: 10,
     marginTop:50,
     zIndex: 2,
+  },
+  optionsText: {
+    fontSize: 15,
+    width: 120,
   },
   optionBtn: {
     flexDirection: 'row',
